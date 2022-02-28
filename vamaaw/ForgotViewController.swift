@@ -9,6 +9,31 @@ import UIKit
 
 class ForgotViewController: UIViewController {
     @IBOutlet weak var dateTF: UITextField!
+    let changVC = ChangePassViewController()
+    enum Segues{
+        static let ChangePassword = "ChangePassword"
+    }
+    //storyboard segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.ChangePassword{
+            let destVC = segue.destination as! ChangePassViewController
+        }
+    }
+    //programmatically
+    @IBAction func ConfirmId(_ sender: Any) {
+        //init subview
+            addChangePasswordCV()
+    }
+    func addChangePasswordCV(){
+        addChild(changVC)
+        view.addSubview(changVC.view)
+        changVC.didMove(toParent: self)
+        setChangePasswordConstraints()	
+    }
+    
+    
+    func setChangePasswordConstraints(){}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //init date picker
@@ -19,6 +44,7 @@ class ForgotViewController: UIViewController {
         datepicker.preferredDatePickerStyle = .wheels
         dateTF.inputView=datepicker
         dateTF.text=formatDate(date: Date())
+    
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
@@ -30,7 +56,8 @@ class ForgotViewController: UIViewController {
         formatter.dateFormat="MMMM dd yyyy"
         return formatter.string(from: date)
     }
-
+    
+    
     /*
     // MARK: - Navigation
 
