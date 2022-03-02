@@ -9,6 +9,8 @@ import UIKit
 
 class ForgotViewController: UIViewController {
     @IBOutlet weak var dateTF: UITextField!
+    
+    @IBOutlet weak var Username: UITextField!
     let changVC = ChangePassViewController()
     enum Segues{
         static let ChangePassword = "ChangePassword"
@@ -23,6 +25,9 @@ class ForgotViewController: UIViewController {
     @IBAction func ConfirmId(_ sender: Any) {
         //init subview
             addChangePasswordCV()
+    }
+    func forgotAuth(){
+        
     }
     func addChangePasswordCV(){
         addChild(changVC)
@@ -44,7 +49,6 @@ class ForgotViewController: UIViewController {
         datepicker.preferredDatePickerStyle = .wheels
         dateTF.inputView=datepicker
         dateTF.text=formatDate(date: Date())
-    
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
