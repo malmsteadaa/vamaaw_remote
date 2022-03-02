@@ -10,6 +10,7 @@
 		845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C6D9127CD10ED00C3208F /* RegisterViewController.swift */; };
 		845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C6D9327CD1B7800C3208F /* ForgotViewController.swift */; };
 		848E381F27CD708300453D44 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E381E27CD708300453D44 /* ChangePassViewController.swift */; };
+		84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */; };
 		84BCD69D27C752A2000E504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD69C27C752A2000E504B /* AppDelegate.swift */; };
 		84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD69E27C752A2000E504B /* SceneDelegate.swift */; };
 		84BCD6A127C752A2000E504B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6A027C752A2000E504B /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		845C6D9127CD10ED00C3208F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		845C6D9327CD1B7800C3208F /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		848E381E27CD708300453D44 /* ChangePassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
+		84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		84BCD69927C752A2000E504B /* vamaaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vamaaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BCD69C27C752A2000E504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BCD69E27C752A2000E504B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				84BCD69C27C752A2000E504B /* AppDelegate.swift */,
 				84BCD69E27C752A2000E504B /* SceneDelegate.swift */,
 				84BCD6A027C752A2000E504B /* ViewController.swift */,
+				84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */,
 				84BCD6A227C752A2000E504B /* Main.storyboard */,
 				845C6D9327CD1B7800C3208F /* ForgotViewController.swift */,
 				845C6D9127CD10ED00C3208F /* RegisterViewController.swift */,
@@ -274,6 +277,7 @@
 				845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */,
 				84BCD6A127C752A2000E504B /* ViewController.swift in Sources */,
 				848E381F27CD708300453D44 /* ChangePassViewController.swift in Sources */,
+				84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */,
 				84BCD69D27C752A2000E504B /* AppDelegate.swift in Sources */,
 				84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */,
 				845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */,
