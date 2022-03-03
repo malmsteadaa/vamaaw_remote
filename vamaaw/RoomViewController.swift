@@ -8,7 +8,7 @@
 //you all ready for this ?
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //placeholder faces
     var imgData = ["img","midimg","sadimg"]
     
@@ -17,7 +17,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "gymCell") as! UserTableViewCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "roomCell") as! UserTableViewCell
         
         switch indexPath.section{
         case 0:
@@ -47,13 +47,13 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section{
         case 0:
-            return "How was your Gym experience?"
+            return "How was your Room?"
         case 1:
-            return "Was there a variety of equipment?"
+            return "Was there enough space in your room?"
         case 2:
             return "How did the staff treat you?"
         case 3:
-            return "Was the equpiment clean?"
+            return "Was the room cleaned in a timely manner?"
         default:
             return ""
         }
@@ -78,4 +78,5 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 
 }
+
 
