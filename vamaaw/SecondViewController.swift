@@ -8,7 +8,7 @@
 //you all ready for this ?
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var imgData = ["img","midimg","sadimg"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

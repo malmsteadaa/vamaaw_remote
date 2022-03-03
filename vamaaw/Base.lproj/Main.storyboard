@@ -323,7 +323,7 @@
         <!--Gym-->
         <scene sceneID="UvX-ng-dBN">
             <objects>
-                <viewController id="VFU-UM-exO" customClass="ViewController" customModule="vamaaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VFU-UM-exO" customClass="SecondViewController" customModule="vamaaw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P22-3B-2Rq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
