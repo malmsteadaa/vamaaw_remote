@@ -9,6 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    //placeholder faces
     var imgData = ["img","midimg","sadimg"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -17,7 +18,23 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "gymCell") as! UserTableViewCell
-        return cell
+        switch indexPath.section{
+        case 0:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 1:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 2:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 3:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        default:
+            return cell
+        }
+        
         }
     
     func numberOfSections(in tableView: UITableView) -> Int {

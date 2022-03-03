@@ -17,6 +17,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "gymCell") as! UserTableViewCell
+        switch indexPath.item{
+        case 0:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 1:
+            return cell
+        default:
+            return cell
+        }
         return cell
         }
     
