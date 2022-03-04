@@ -8,7 +8,8 @@
 //you all ready for this ?
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    //placeholder faces
     var imgData = ["img","midimg","sadimg"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -16,17 +17,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "gymCell") as! UserTableViewCell
-        switch indexPath.item{
+        var cell = tableView.dequeueReusableCell(withIdentifier: "foodCell") as! UserTableViewCell
+        
+        switch indexPath.section{
         case 0:
             cell.face.image = UIImage(named: imgData[indexPath.row])
             return cell
         case 1:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 2:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 3:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
             return cell
         default:
             return cell
         }
-        return cell
+        
+    
+        
         }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,13 +47,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section{
         case 0:
-            return "How was your Gym experience?"
+            return "How was the food?"
         case 1:
-            return "Was there a variety of equipment?"
+            return "Was the food prepared in a timely manner?"
         case 2:
             return "How did the staff treat you?"
         case 3:
-            return "Was the equpiment clean?"
+            return "How clean were the utensils?"
         default:
             return ""
         }
@@ -51,7 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             switch indexPath.item {
             case 0 :
-                return print("happy")
+                return print("good")
             case 1:
                 return print("ok")
             case 2:

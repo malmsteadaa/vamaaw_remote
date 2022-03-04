@@ -8,7 +8,8 @@
 //you all ready for this ?
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    //placeholder faces
     var imgData = ["img","midimg","sadimg"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -17,16 +18,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "gymCell") as! UserTableViewCell
-        switch indexPath.item{
+        
+        switch indexPath.section{
         case 0:
             cell.face.image = UIImage(named: imgData[indexPath.row])
             return cell
         case 1:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 2:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
+            return cell
+        case 3:
+            cell.face.image = UIImage(named: imgData[indexPath.row])
             return cell
         default:
             return cell
         }
-        return cell
+        
+    
+        
         }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,7 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             switch indexPath.item {
             case 0 :
-                return print("happy")
+                return print("good")
             case 1:
                 return print("ok")
             case 2:
