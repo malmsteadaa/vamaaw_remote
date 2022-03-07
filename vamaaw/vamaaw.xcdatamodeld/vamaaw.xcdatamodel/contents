@@ -9,7 +9,7 @@
     </entity>
     <entity name="TheUser" representedClassName="TheUser" syncable="YES">
         <attribute name="dob" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="name" optional="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="pw" optional="YES" attributeType="String"/>
         <attribute name="un" optional="YES" attributeType="String"/>
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TheReviews"/>

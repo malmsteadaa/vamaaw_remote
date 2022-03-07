@@ -19,6 +19,7 @@
 		84B108B527D669BE00D6573F /* TheUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B127D669BE00D6573F /* TheUser+CoreDataProperties.swift */; };
 		84B108B627D669BE00D6573F /* TheReviews+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B227D669BE00D6573F /* TheReviews+CoreDataClass.swift */; };
 		84B108B727D669BE00D6573F /* TheReviews+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B327D669BE00D6573F /* TheReviews+CoreDataProperties.swift */; };
+		84B108B927D678C700D6573F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B827D678C700D6573F /* LoginViewController.swift */; };
 		84BCD69D27C752A2000E504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD69C27C752A2000E504B /* AppDelegate.swift */; };
 		84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD69E27C752A2000E504B /* SceneDelegate.swift */; };
 		84BCD6A127C752A2000E504B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6A027C752A2000E504B /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		84B108B127D669BE00D6573F /* TheUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84B108B227D669BE00D6573F /* TheReviews+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheReviews+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84B108B327D669BE00D6573F /* TheReviews+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheReviews+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84B108B827D678C700D6573F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84BCD69927C752A2000E504B /* vamaaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vamaaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BCD69C27C752A2000E504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BCD69E27C752A2000E504B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,12 +141,13 @@
 				84BCD6A227C752A2000E504B /* Main.storyboard */,
 				84219E8A27D13097002A95F2 /* RoomViewController.swift */,
 				845C6D9327CD1B7800C3208F /* ForgotViewController.swift */,
-				845C6D9127CD10ED00C3208F /* RegisterViewController.swift */,
 				84BCD6A827C752B1000E504B /* Assets.xcassets */,
 				84BCD6AA27C752B1000E504B /* LaunchScreen.storyboard */,
 				84BCD6AD27C752B1000E504B /* Info.plist */,
 				84BCD6A527C752A2000E504B /* vamaaw.xcdatamodeld */,
+				845C6D9127CD10ED00C3208F /* RegisterViewController.swift */,
 				848E381E27CD708300453D44 /* ChangePassViewController.swift */,
+				84B108B827D678C700D6573F /* LoginViewController.swift */,
 			);
 			path = vamaaw;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				84219E8B27D13097002A95F2 /* RoomViewController.swift in Sources */,
 				84219E8927D12FD9002A95F2 /* FoodViewController.swift in Sources */,
 				84BCD69D27C752A2000E504B /* AppDelegate.swift in Sources */,
+				84B108B927D678C700D6573F /* LoginViewController.swift in Sources */,
 				84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */,
 				84B108B527D669BE00D6573F /* TheUser+CoreDataProperties.swift in Sources */,
 				845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */,
