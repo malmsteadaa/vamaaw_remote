@@ -43,28 +43,33 @@ class RegisterViewController: UIViewController {
     }
    
     @IBAction func Register(_ sender: Any) {
+        var st:String=""
+
         if !DBhelper.inst.HasUser(n: un.text!){
+
         if pw.text! == cpw.text!
         {   //core data
             DBhelper.inst.addUser(un: un.text!, name: name.text!, dob: formatetoDate(s: dateTF.text!), pw: pw.text!)
         //key chain
         //set attribute
         let att: [String : Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrAccount as String : un.text!, kSecValueData as String : pw.text!.data(using: .utf8)!]
-        
+        //type of alert
         //add Data
         if SecItemAdd(att as CFDictionary, nil) == noErr{
-            print("data saved successfully")
-        }
+            st = "data saved successfully"
+            //present login view since we sucessfully regester
+            let vc = LoginViewController()
+            self.navigationController?.pushViewController(vc, animated: true)        }
         else{
-            print("data not saved")
+            st = "Data not saved"
         }
         }else{
-            print("Mix Match Password")
+            st = "Mix Match Password"
         }
         } else{
-            print("user exist")
+            st = "User already exist."
         }
-        
+        alertor(title: "Register says", message: st )
     }
     /*
     // MARK: - Navigation
@@ -75,5 +80,9 @@ class RegisterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func alertor(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default,handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
