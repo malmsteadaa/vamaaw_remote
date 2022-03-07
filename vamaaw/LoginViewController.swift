@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
              if(pass==pw.text!){
                  success()
              }else{
-                 print("failed login")
+                 print("")
              }
             }
         }else{

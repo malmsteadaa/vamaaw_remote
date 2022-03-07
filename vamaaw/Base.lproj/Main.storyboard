@@ -122,10 +122,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-hA-yb6">
-                                <rect key="frame" x="169" y="499" width="78" height="31"/>
+                                <rect key="frame" x="169" y="500" width="78" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                <connections>
+                                    <action selector="Register:" destination="6rq-aU-taF" eventType="touchUpInside" id="Boe-Wx-VCk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r0-JZ-Eck">
                                 <rect key="frame" x="40" y="262" width="74" height="21"/>
@@ -168,7 +171,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="8o8-mI-0Ye"/>
                     <connections>
+                        <outlet property="cpw" destination="VFi-o9-TM8" id="mXT-48-sbH"/>
                         <outlet property="dateTF" destination="ZcD-Ms-5P0" id="B1n-fO-TXu"/>
+                        <outlet property="name" destination="397-GE-aEh" id="Tta-GJ-RO4"/>
+                        <outlet property="pw" destination="584-Mw-Yhh" id="lJs-3M-PH5"/>
+                        <outlet property="un" destination="kz1-sz-tia" id="jrT-PW-fho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEI-iC-jsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

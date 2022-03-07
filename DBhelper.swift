@@ -37,6 +37,40 @@ class DBhelper{
         
         return stu
     }
+    func HasUser(n: String)->Bool{
+        
+        
+        var fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "TheUser")
+        fReq.predicate=NSPredicate(format:"un == %@", n)
+        fReq.fetchLimit=1
+        do{
+            
+            let req = try context?.fetch(fReq) as! [TheUser]
+            if(req.count != 0){
+                return true
+            }else{
+                print("no such data")
+            }
+        }catch{
+            print("cant retrieve data")
+        }
+        
+        return false
+    }
+    func addUser(un:String,name:String,dob:Date,pw:String){
+        let stu = NSEntityDescription.insertNewObject(forEntityName: "TheUser", into: context!) as! TheUser
+        //give the new instance data
+        stu.name=name
+        stu.un=un
+        stu.dob=dob
+        stu.pw=pw
+        //try to save data
+        do{
+            try context?.save()
+        }catch{
+                print("Data not saved.")
+        }
+    }
     func UpdateUser(n:String,name:String,dob:Date,pw:String,cpw:String){
         var st = TheUser()
         var freq=NSFetchRequest<NSManagedObject>.init(entityName: "TheUser")
