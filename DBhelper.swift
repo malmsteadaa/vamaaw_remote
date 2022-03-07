@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 class DBhelper{
+    
     enum TypeOfSerevice{
         case Food
         case Gym

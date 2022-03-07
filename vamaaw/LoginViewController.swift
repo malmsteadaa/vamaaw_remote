@@ -8,7 +8,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    static var UserName :String = " "
+    func logout(){
+        LoginViewController.UserName=" "
+    }
     @IBOutlet weak var pw: UITextField!
     @IBOutlet weak var un: UITextField!
     override func viewDidLoad() {
@@ -28,16 +31,17 @@ class LoginViewController: UIViewController {
             let pass = String(data: password, encoding: .utf8){
                 print("id is", uid, "password is", pass)
              if(pass==pw.text!){
-                 success()
+                 success(name:uid)
              }else{
-                 print("")
+                 print("Failed login")
              }
             }
         }else{
             print("no data found")
         }
     }
-    func success(){
+    func success(name:String){
+        LoginViewController.UserName=name
     }
     /*
     // MARK: - Navigation
