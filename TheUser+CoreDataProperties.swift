@@ -21,8 +21,14 @@ extension TheUser {
     @NSManaged public var name: String?
     @NSManaged public var un: String?
     @NSManaged public var reviews: NSSet?
-
+    public var reviewArray: [TheReviews]{
+        let set = reviews as? Set<TheReviews> ?? []
+        return set.sorted{
+            $0.date! < $1.date!
+        }
+    }
 }
+
 
 // MARK: Generated accessors for reviews
 extension TheUser {
