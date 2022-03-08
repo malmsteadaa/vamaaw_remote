@@ -42,7 +42,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-       return 4
+       return 5
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -87,9 +87,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         result = gymTotal
         if gymTotal <= 6 {
             performSegue(withIdentifier: "gotobadReview", sender: self)
+            gymTotal = 0
         }
         else{
             performSegue(withIdentifier: "gotogoodReview", sender: self)
+            gymTotal = 0
         }
     }
     override func viewDidLoad() {
