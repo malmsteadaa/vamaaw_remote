@@ -14,12 +14,12 @@
 		845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C6D9327CD1B7800C3208F /* ForgotViewController.swift */; };
 		84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */; };
 		84B1089F27D65DD000D6573F /* DBhelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1089E27D65DCF00D6573F /* DBhelper.swift */; };
-		84B108B427D669BE00D6573F /* TheUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B027D669BE00D6573F /* TheUser+CoreDataClass.swift */; };
-		84B108B527D669BE00D6573F /* TheUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B127D669BE00D6573F /* TheUser+CoreDataProperties.swift */; };
-		84B108B627D669BE00D6573F /* TheReviews+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B227D669BE00D6573F /* TheReviews+CoreDataClass.swift */; };
-		84B108B727D669BE00D6573F /* TheReviews+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B327D669BE00D6573F /* TheReviews+CoreDataProperties.swift */; };
 		84B108B927D678C700D6573F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B108B827D678C700D6573F /* LoginViewController.swift */; };
 		84B1093B27D7AE4400D6573F /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1093A27D7AE4400D6573F /* EditUserViewController.swift */; };
+		84B1094027D7B8F400D6573F /* TheReviews+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1093C27D7B8F300D6573F /* TheReviews+CoreDataClass.swift */; };
+		84B1094127D7B8F400D6573F /* TheReviews+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1093D27D7B8F400D6573F /* TheReviews+CoreDataProperties.swift */; };
+		84B1094227D7B8F400D6573F /* TheUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1093E27D7B8F400D6573F /* TheUser+CoreDataClass.swift */; };
+		84B1094327D7B8F400D6573F /* TheUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1093F27D7B8F400D6573F /* TheUser+CoreDataProperties.swift */; };
 		84BCD69D27C752A2000E504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD69C27C752A2000E504B /* AppDelegate.swift */; };
 		84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD69E27C752A2000E504B /* SceneDelegate.swift */; };
 		84BCD6A127C752A2000E504B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6A027C752A2000E504B /* ViewController.swift */; };
@@ -57,12 +57,12 @@
 		845C6D9327CD1B7800C3208F /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		84B1089E27D65DCF00D6573F /* DBhelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBhelper.swift; sourceTree = "<group>"; };
-		84B108B027D669BE00D6573F /* TheUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheUser+CoreDataClass.swift"; sourceTree = "<group>"; };
-		84B108B127D669BE00D6573F /* TheUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		84B108B227D669BE00D6573F /* TheReviews+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheReviews+CoreDataClass.swift"; sourceTree = "<group>"; };
-		84B108B327D669BE00D6573F /* TheReviews+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheReviews+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84B108B827D678C700D6573F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84B1093A27D7AE4400D6573F /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
+		84B1093C27D7B8F300D6573F /* TheReviews+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheReviews+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84B1093D27D7B8F400D6573F /* TheReviews+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheReviews+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84B1093E27D7B8F400D6573F /* TheUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84B1093F27D7B8F400D6573F /* TheUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84BCD69927C752A2000E504B /* vamaaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vamaaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BCD69C27C752A2000E504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BCD69E27C752A2000E504B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,10 +107,10 @@
 		84BCD69027C752A2000E504B = {
 			isa = PBXGroup;
 			children = (
-				84B108B027D669BE00D6573F /* TheUser+CoreDataClass.swift */,
-				84B108B127D669BE00D6573F /* TheUser+CoreDataProperties.swift */,
-				84B108B227D669BE00D6573F /* TheReviews+CoreDataClass.swift */,
-				84B108B327D669BE00D6573F /* TheReviews+CoreDataProperties.swift */,
+				84B1093C27D7B8F300D6573F /* TheReviews+CoreDataClass.swift */,
+				84B1093D27D7B8F400D6573F /* TheReviews+CoreDataProperties.swift */,
+				84B1093E27D7B8F400D6573F /* TheUser+CoreDataClass.swift */,
+				84B1093F27D7B8F400D6573F /* TheUser+CoreDataProperties.swift */,
 				84B1089E27D65DCF00D6573F /* DBhelper.swift */,
 				84BCD69B27C752A2000E504B /* vamaaw */,
 				84BCD6B527C752B2000E504B /* vamaawTests */,
@@ -300,22 +300,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B108B627D669BE00D6573F /* TheReviews+CoreDataClass.swift in Sources */,
 				84BCD6A727C752A2000E504B /* vamaaw.xcdatamodeld in Sources */,
 				845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */,
 				84BCD6A127C752A2000E504B /* ViewController.swift in Sources */,
 				84B1089F27D65DD000D6573F /* DBhelper.swift in Sources */,
+				84B1094327D7B8F400D6573F /* TheUser+CoreDataProperties.swift in Sources */,
 				84219E8727D11FB3002A95F2 /* SecondViewController.swift in Sources */,
-				84B108B727D669BE00D6573F /* TheReviews+CoreDataProperties.swift in Sources */,
-				84B108B427D669BE00D6573F /* TheUser+CoreDataClass.swift in Sources */,
 				84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */,
 				84219E8B27D13097002A95F2 /* RoomViewController.swift in Sources */,
 				84219E8927D12FD9002A95F2 /* FoodViewController.swift in Sources */,
 				84BCD69D27C752A2000E504B /* AppDelegate.swift in Sources */,
 				84B108B927D678C700D6573F /* LoginViewController.swift in Sources */,
+				84B1094227D7B8F400D6573F /* TheUser+CoreDataClass.swift in Sources */,
 				84B1093B27D7AE4400D6573F /* EditUserViewController.swift in Sources */,
+				84B1094127D7B8F400D6573F /* TheReviews+CoreDataProperties.swift in Sources */,
+				84B1094027D7B8F400D6573F /* TheReviews+CoreDataClass.swift in Sources */,
 				84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */,
-				84B108B527D669BE00D6573F /* TheUser+CoreDataProperties.swift in Sources */,
 				845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,36 @@ class DBhelper{
     }
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     static var inst=DBhelper()
-    
+    func reset(){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TheUser")
+          fetchRequest.returnsObjectsAsFaults = false
+          do {
+              let results = try context?.fetch(fetchRequest) as! [TheUser]
+              for object in results {
+                  guard let objectData = object as? NSManagedObject else {continue}
+                  context?.delete(objectData)
+              }
+          } catch let error {
+              print("Detele all data in \("TheUser") error :", error)
+          }
+        let fetchRequest2 = NSFetchRequest<NSFetchRequestResult>(entityName: "TheReviews")
+          fetchRequest2.returnsObjectsAsFaults = false
+          do {
+              let results = try context?.fetch(fetchRequest2) as! [TheReviews]
+              for object in results {
+                  guard let objectData = object as? NSManagedObject else {continue}
+                  context?.delete(objectData)
+              }
+          } catch let error {
+              print("Detele all data in \("TheReviews") error :", error)
+          }
+        let secItemClasses = [kSecClassGenericPassword, kSecClassInternetPassword, kSecClassCertificate, kSecClassKey, kSecClassIdentity]
+        for itemClass in secItemClasses {
+            let spec: NSDictionary = [kSecClass: itemClass]
+            SecItemDelete(spec)
+        }
+        
+    }
     func GetUser(n: String)->TheUser{
         var stu = TheUser()
         
@@ -32,7 +61,7 @@ class DBhelper{
                 print(req.first!.un)
                 stu = req.first!
             }else{
-                print("no such data")
+                print("no such user data")
             }
         }catch{
             print("cant retrieve data")
@@ -52,7 +81,7 @@ class DBhelper{
             if(req.count != 0){
                 return true
             }else{
-                print("no such data")
+                print("no user such data")
             }
         }catch{
             print("cant retrieve data")
@@ -70,6 +99,7 @@ class DBhelper{
         //try to save data
         do{
             try context?.save()
+            print("saved")
         }catch{
                 print("Data not saved.")
         }
@@ -117,8 +147,11 @@ class DBhelper{
             print("It was updated")
         }else{
             print("It wasn't updated")
+            
         }
     }
+    
+    
     
     //REVIEWS
         func GetReview(id:UUID)->TheReviews{
@@ -160,6 +193,20 @@ class DBhelper{
         return re    }
     func GetReviews()->[TheReviews]{
         var re = [TheReviews]()
+        
+            
+            var fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "TheReview")
+            do{
+                
+                let req = try context?.fetch(fReq) as! [TheReviews]
+                if(req.count != 0){
+re=req                }else{
+                    print("no such data")
+                }
+            }catch{
+                print("cant retrieve data")
+            }
+            
         return re
     }
     

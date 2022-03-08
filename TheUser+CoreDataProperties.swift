@@ -2,7 +2,7 @@
 //  TheUser+CoreDataProperties.swift
 //  vamaaw
 //
-//  Created by admin on 3/7/22.
+//  Created by admin on 3/8/22.
 //
 //
 
@@ -17,18 +17,12 @@ extension TheUser {
     }
 
     @NSManaged public var dob: Date?
-    @NSManaged public var pw: String?
     @NSManaged public var name: String?
+    @NSManaged public var pw: String?
     @NSManaged public var un: String?
     @NSManaged public var reviews: NSSet?
-    public var reviewArray: [TheReviews]{
-        let set = reviews as? Set<TheReviews> ?? []
-        return set.sorted{
-            $0.date! < $1.date!
-        }
-    }
-}
 
+}
 
 // MARK: Generated accessors for reviews
 extension TheUser {

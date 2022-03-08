@@ -9,9 +9,11 @@ import UIKit
 
 class EditUserViewController: UIViewController {
     var today:String?
+    var na:String?
     @IBOutlet weak var Name: UITextField!
     @IBOutlet weak var pw: UITextField!
-    @IBOutlet weak var DateTF: UITextField!
+    @IBOutlet weak var cpw: UITextField!
+    @IBOutlet weak var dateTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 //init date picker
@@ -20,21 +22,26 @@ class EditUserViewController: UIViewController {
         datepicker.addTarget(self, action: #selector(dateChange(datepicker:)), for: UIControl.Event.valueChanged)
         datepicker.frame.size=CGSize(width: 0, height: 300)
         datepicker.preferredDatePickerStyle = .wheels
-        DateTF.inputView=datepicker
-        DateTF.text=formatDate(date: Date())
-        today = DateTF.text!.copy() as! String
+        if datepicker == nil {
+            print("nil")
+        }
+        dateTF.inputView=datepicker
+        dateTF.text=formatDate(date: formatetoDate(s: today!))
+                               Name.text=na!
+        
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
-        DateTF.text=formatDate(date: datepicker.date)
+        dateTF.text=formatDate(date: datepicker.date)
     }
     func formatDate(date: Date)->String
     {
         let formatter = DateFormatter()
-        formatter.dateFormat="MMMM dd, yyyy"
+        formatter.dateFormat="MMMM dd yyyy"
         return formatter.string(from: date)
     }
     func formatetoDate(s:String)->Date{
+        print("format to date",s)
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat="MMMM dd, yyyy"
@@ -45,16 +52,16 @@ class EditUserViewController: UIViewController {
     @IBAction func update(_ sender: Any) {
         var st:String?
         if pw.text! != ""{
-            if pw.text! == pw.text{
+            if pw.text! != cpw.text!{
                 DBhelper.inst.UpdateUserPW(n: (LoginViewController.UserName?.un)!, pw: pw.text!)
             }else{
                 st="Mix Match Passwords"
             }
         }
-        if(today == DateTF.text!){
+        if(today == dateTF.text!){
             DBhelper.inst.UpdateUserNameDOB(n:( LoginViewController.UserName?.un)!, name: Name.text!, dob: nil)
         }else{
-            DBhelper.inst.UpdateUserNameDOB(n: (LoginViewController.UserName?.un)!, name: Name.text!, dob: formatetoDate(s: DateTF.text!))
+            DBhelper.inst.UpdateUserNameDOB(n: (LoginViewController.UserName?.un)!, name: Name.text!, dob: formatetoDate(s: dateTF.text!))
         }
         if st != nil{
             alertor(title: "Editor", message: st!)

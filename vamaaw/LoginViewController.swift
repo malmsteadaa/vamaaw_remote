@@ -42,8 +42,17 @@ class LoginViewController: UIViewController {
         }
         alertor(title: "login", message: st)
     }
+    func formatDate(date: Date)->String
+    {
+        let formatter = DateFormatter()
+        formatter.dateFormat="MMMM dd yyyy"
+        return formatter.string(from: date)
+    }
     func success(name:String){
-        LoginViewController.UserName=DBhelper.inst.GetUser(n: name)
+        print("success")
+        LoginViewController.UserName = DBhelper.inst.GetUser(n: name)
+        self.performSegue(withIdentifier: "success", sender: self)
+
     }
     /*
     // MARK: - Navigation
@@ -53,7 +62,20 @@ class LoginViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+     
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "success"){
+                let displayVC = segue.destination as! EditUserViewController
+            print(LoginViewController.UserName?.dob!)
+            displayVC.na = LoginViewController.UserName?.un
+            displayVC.today = formatDate(date:(LoginViewController.UserName?.dob)!)
+        }
+    }
+    @IBAction func reset(_ sender: Any) {
+       
+        DBhelper.inst.reset()
+    }
     func alertor(title:String, message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default,handler: nil))
