@@ -74,7 +74,7 @@ class DBhelper{
                 print("Data not saved.")
         }
     }
-    func UpdateUserNameDOB(n:String,name:String,dob:Date){
+    func UpdateUserNameDOB(n:String,name:String,dob:Date?){
         var st = TheUser()
         var freq=NSFetchRequest<NSManagedObject>.init(entityName: "TheUser")
         freq.predicate=NSPredicate(format: "un == %@", n)

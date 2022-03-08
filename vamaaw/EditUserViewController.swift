@@ -1,19 +1,17 @@
 //
-//  RegisterViewController.swift
+//  EditUserViewController.swift
 //  vamaaw
 //
-//  Created by admin on 2/28/22.
+//  Created by admin on 3/8/22.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController {
-
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var cpw: UITextField!
+class EditUserViewController: UIViewController {
+    var today:String?
+    @IBOutlet weak var Name: UITextField!
     @IBOutlet weak var pw: UITextField!
-    @IBOutlet weak var un: UITextField!
-    @IBOutlet weak var dateTF: UITextField!
+    @IBOutlet weak var DateTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 //init date picker
@@ -22,13 +20,13 @@ class RegisterViewController: UIViewController {
         datepicker.addTarget(self, action: #selector(dateChange(datepicker:)), for: UIControl.Event.valueChanged)
         datepicker.frame.size=CGSize(width: 0, height: 300)
         datepicker.preferredDatePickerStyle = .wheels
-        dateTF.inputView=datepicker
-        dateTF.text=formatDate(date: Date())
-        
+        DateTF.inputView=datepicker
+        DateTF.text=formatDate(date: Date())
+        today = DateTF.text!.copy() as! String
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
-        dateTF.text=formatDate(date: datepicker.date)
+        DateTF.text=formatDate(date: datepicker.date)
     }
     func formatDate(date: Date)->String
     {
@@ -43,36 +41,28 @@ class RegisterViewController: UIViewController {
         return formatter.date(from: s)!
     }
    
-    @IBAction func Register(_ sender: Any) {
-        var st:String=""
-
-        if !DBhelper.inst.HasUser(n: un.text!){
-
-        if pw.text! == cpw.text!
-        {   //core data
-            DBhelper.inst.addUser(un: un.text!, name: name.text!, dob: formatetoDate(s: dateTF.text!), pw: pw.text!)
-        //key chain
-        //set attribute
-        let att: [String : Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrAccount as String : un.text!, kSecValueData as String : pw.text!.data(using: .utf8)!]
-        //type of alert
-        //add Data
-        if SecItemAdd(att as CFDictionary, nil) == noErr{
-            st = "data saved successfully"
-            //pop current viewcontroller
-            _ = navigationController?.popViewController(animated: true)
-     }
-        else{
-            st = "Data not saved"
+    
+    @IBAction func update(_ sender: Any) {
+        var st:String?
+        if pw.text! != ""{
+            if pw.text! == pw.text{
+                DBhelper.inst.UpdateUserPW(n: (LoginViewController.UserName?.un)!, pw: pw.text!)
+            }else{
+                st="Mix Match Passwords"
+            }
         }
+        if(today == DateTF.text!){
+            DBhelper.inst.UpdateUserNameDOB(n:( LoginViewController.UserName?.un)!, name: Name.text!, dob: nil)
         }else{
-            st = "Mix Match Password"
+            DBhelper.inst.UpdateUserNameDOB(n: (LoginViewController.UserName?.un)!, name: Name.text!, dob: formatetoDate(s: DateTF.text!))
         }
+        if st != nil{
+            alertor(title: "Editor", message: st!)
         } else{
-            st = "User already exist."
+            alertor(title: "Editor", message: "Edit successful")
         }
-        alertor(title: "Register says", message: st )
-        
     }
+    
     /*
     // MARK: - Navigation
 
@@ -82,6 +72,7 @@ class RegisterViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     func alertor(title:String, message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default,handler: nil))
