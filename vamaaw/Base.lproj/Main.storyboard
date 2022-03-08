@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1d5-OO-dkG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MFS-A6-tKA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -68,7 +68,6 @@
         <!--Register View Controller-->
         <scene sceneID="3zE-h6-SNY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vEI-iC-jsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="6rq-aU-taF" customClass="RegisterViewController" customModule="vamaaw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1pQ-qd-P8E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -161,6 +160,7 @@
                         <outlet property="un" destination="kz1-sz-tia" id="jrT-PW-fho"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEI-iC-jsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2339" y="38"/>
         </scene>
@@ -334,7 +334,7 @@
                     <connections>
                         <outlet property="pw" destination="YSO-ml-2Bb" id="d2u-Fd-Rtv"/>
                         <outlet property="un" destination="Gml-Bn-yEj" id="wRn-m6-mQP"/>
-                        <segue destination="2NO-7e-BqH" kind="presentation" identifier="success" modalPresentationStyle="fullScreen" id="UTH-Yf-sTQ"/>
+                        <segue destination="2NO-7e-BqH" kind="show" identifier="success" id="UTH-Yf-sTQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ua-Oi-AUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

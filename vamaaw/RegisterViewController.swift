@@ -58,9 +58,7 @@ class RegisterViewController: UIViewController {
         //add Data
         if SecItemAdd(att as CFDictionary, nil) == noErr{
             st = "data saved successfully"
-            //pop current viewcontroller
-            _ = navigationController?.popViewController(animated: true)
-     }
+        }
         else{
             st = "Data not saved"
         }
@@ -71,7 +69,6 @@ class RegisterViewController: UIViewController {
             st = "User already exist."
         }
         alertor(title: "Register says", message: st )
-        
     }
     /*
     // MARK: - Navigation
@@ -84,7 +81,13 @@ class RegisterViewController: UIViewController {
     */
     func alertor(title:String, message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default,handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { [self] _ in
+           
+                _ = navigationController?.popViewController(animated: true)
+           
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    
     }
 }
