@@ -19,7 +19,7 @@ extension TheReviews {
     @NSManaged public var rating: Int16
     @NSManaged public var commets: String?
     @NSManaged public var tos: String?
-    @NSManaged public var id: Int16
+    @NSManaged public var id: UUID
     @NSManaged public var date: Date?
 
 }

@@ -8,31 +8,46 @@
 import UIKit
 
 class ForgotViewController: UIViewController {
+    @IBOutlet weak var un: UITextField!
     @IBOutlet weak var dateTF: UITextField!
-    let changVC = ChangePassViewController()
     enum Segues{
         static let ChangePassword = "ChangePassword"
     }
-    //storyboard segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segues.ChangePassword{
-            let destVC = segue.destination as! ChangePassViewController
-        }
-    }
+    
     //programmatically
     @IBAction func ConfirmId(_ sender: Any) {
+        var user:TheUser=DBhelper.inst.GetUser(n: un.text!)
+        if user.dob == formatetoDate(s: dateTF.text!) {
         //init subview
-            addChangePasswordCV()
+            addChangePasswordAlert()
+            
+        }else{alertor(title: "Password manager says:", message: "Incorrect info")}
     }
-    func addChangePasswordCV(){
-        addChild(changVC)
-        view.addSubview(changVC.view)
-        changVC.didMove(toParent: self)
-        setChangePasswordConstraints()	
+    func addChangePasswordAlert(){
+        let alert = UIAlertController(title:"Backdoor", message: "Whats your new password", preferredStyle: .alert)
+        alert.addTextField{(textField) in textField.placeholder="New Passowrd"}
+        alert.addTextField{(textField) in textField.placeholder="Confirm new Passowrd"}
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { [self] _ in
+            if alert.textFields?[0].text! == alert.textFields?[1].text!{
+                //coredata save with key value
+                DBhelper.inst.UpdateUserPW(n: self.un.text!, pw: (alert.textFields?[0].text!)!)
+            }else{
+                alertor(title: "password reset", message: "Mix Match Passwords")
+                addChangePasswordAlert()
+            }
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(saveAction)
+        present(alert, animated: true, completion: nil)
+    }
+    func formatetoDate(s:String)->Date{
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat="MMMM dd, yyyy"
+        return formatter.date(from: s)!
     }
     
-    
-    func setChangePasswordConstraints(){}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +59,7 @@ class ForgotViewController: UIViewController {
         datepicker.preferredDatePickerStyle = .wheels
         dateTF.inputView=datepicker
         dateTF.text=formatDate(date: Date())
-    
+        
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
@@ -56,8 +71,12 @@ class ForgotViewController: UIViewController {
         formatter.dateFormat="MMMM dd yyyy"
         return formatter.string(from: date)
     }
-    
-    
+    func alertor(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default,handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+ 
     /*
     // MARK: - Navigation
 

@@ -8,9 +8,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    static var UserName :String = " "
+    static var UserName :TheUser?
     func logout(){
-        LoginViewController.UserName=" "
+        LoginViewController.UserName = nil
     }
     @IBOutlet weak var pw: UITextField!
     @IBOutlet weak var un: UITextField!
@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func login(_ sender: Any) {
+        var st=""
         let q:[String : Any] = [kSecClass as String : kSecClassGenericPassword, kSecAttrAccount as String : un.text, kSecReturnAttributes as String : true, kSecReturnData as String : true]
         var res : CFTypeRef?
         if SecItemCopyMatching(q as CFDictionary, &res) == noErr{
@@ -33,15 +34,16 @@ class LoginViewController: UIViewController {
              if(pass==pw.text!){
                  success(name:uid)
              }else{
-                 print("Failed login")
+                 st = "Failed login"
              }
             }
         }else{
-            print("no data found")
+            st="no data found"
         }
+        alertor(title: "login", message: st)
     }
     func success(name:String){
-        LoginViewController.UserName=name
+        LoginViewController.UserName=DBhelper.inst.GetUser(n: name)
     }
     /*
     // MARK: - Navigation
@@ -52,5 +54,9 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func alertor(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default,handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
