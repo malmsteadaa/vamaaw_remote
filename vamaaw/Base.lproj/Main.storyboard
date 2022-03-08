@@ -66,10 +66,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGC-6d-4MZ">
-                                <rect key="frame" x="88" y="439" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4dQ-iZ-pzj"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
