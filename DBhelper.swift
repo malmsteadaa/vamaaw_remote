@@ -28,7 +28,9 @@ class DBhelper{
             
             let req = try context?.fetch(fReq) as! [TheUser]
             if(req.count != 0){
-                stu = req.first as! TheUser
+                print("we have a user")
+                print(req.first!.un)
+                stu = req.first!
             }else{
                 print("no such data")
             }
@@ -45,7 +47,7 @@ class DBhelper{
         fReq.predicate=NSPredicate(format:"un == %@", n)
         fReq.fetchLimit=1
         do{
-            
+            print("in do block")
             let req = try context?.fetch(fReq) as! [TheUser]
             if(req.count != 0){
                 return true

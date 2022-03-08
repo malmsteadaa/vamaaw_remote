@@ -6,6 +6,7 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="tos" optional="YES" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TheUser"/>
     </entity>
     <entity name="TheUser" representedClassName="TheUser" syncable="YES">
         <attribute name="dob" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -15,7 +16,7 @@
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TheReviews"/>
     </entity>
     <elements>
-        <element name="TheReviews" positionX="-54" positionY="18" width="128" height="104"/>
+        <element name="TheReviews" positionX="-54" positionY="18" width="128" height="119"/>
         <element name="TheUser" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

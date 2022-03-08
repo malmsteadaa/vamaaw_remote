@@ -32,6 +32,7 @@ class ForgotViewController: UIViewController {
             if alert.textFields?[0].text! == alert.textFields?[1].text!{
                 //coredata save with key value
                 DBhelper.inst.UpdateUserPW(n: self.un.text!, pw: (alert.textFields?[0].text!)!)
+                _ = navigationController?.popViewController(animated: true)
             }else{
                 alertor(title: "password reset", message: "Mix Match Passwords")
                 addChangePasswordAlert()

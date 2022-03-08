@@ -57,9 +57,9 @@ class RegisterViewController: UIViewController {
         //add Data
         if SecItemAdd(att as CFDictionary, nil) == noErr{
             st = "data saved successfully"
-            //present login view since we sucessfully regester
-            let vc = LoginViewController()
-            self.navigationController?.pushViewController(vc, animated: true)        }
+            //pop current viewcontroller
+            _ = navigationController?.popViewController(animated: true)
+     }
         else{
             st = "Data not saved"
         }
@@ -70,6 +70,7 @@ class RegisterViewController: UIViewController {
             st = "User already exist."
         }
         alertor(title: "Register says", message: st )
+        
     }
     /*
     // MARK: - Navigation
