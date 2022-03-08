@@ -76,6 +76,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
     }
     var result : Int!
+    
     @IBAction func submitReview(_ sender: Any) {
         result = foodTotal
         if foodTotal <= 6 {
