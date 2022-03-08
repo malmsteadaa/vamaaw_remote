@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var pw: UITextField!
     @IBOutlet weak var un: UITextField!
     @IBOutlet weak var dateTF: UITextField!
+    @IBOutlet weak var backgroundGradientView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 //init date picker
@@ -24,6 +25,13 @@ class RegisterViewController: UIViewController {
         datepicker.preferredDatePickerStyle = .wheels
         dateTF.inputView=datepicker
         dateTF.text=formatDate(date: Date())
+//creates and applys gradient to view
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors =
+        [UIColor.blue.cgColor, UIColor.white.cgColor]
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+        
     }
     
     @objc func dateChange(datepicker: UIDatePicker){

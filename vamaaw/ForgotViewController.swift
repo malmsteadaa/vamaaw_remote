@@ -10,6 +10,7 @@ import UIKit
 class ForgotViewController: UIViewController {
     @IBOutlet weak var un: UITextField!
     @IBOutlet weak var dateTF: UITextField!
+    @IBOutlet weak var backgroundGradientView: UIView!
     enum Segues{
         static let ChangePassword = "ChangePassword"
     }
@@ -52,7 +53,13 @@ class ForgotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//init date picker
+    //creates and applys gradient to view
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors =
+        [UIColor.blue.cgColor, UIColor.white.cgColor]
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+    //init date picker
         let datepicker = UIDatePicker()
         datepicker.datePickerMode = .date
         datepicker.addTarget(self, action: #selector(dateChange(datepicker:)), for: UIControl.Event.valueChanged)
@@ -60,7 +67,6 @@ class ForgotViewController: UIViewController {
         datepicker.preferredDatePickerStyle = .wheels
         dateTF.inputView=datepicker
         dateTF.text=formatDate(date: Date())
-        
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
