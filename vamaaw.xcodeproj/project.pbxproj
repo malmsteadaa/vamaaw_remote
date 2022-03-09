@@ -10,6 +10,8 @@
 		84219E8727D11FB3002A95F2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84219E8627D11FB3002A95F2 /* SecondViewController.swift */; };
 		84219E8927D12FD9002A95F2 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84219E8827D12FD9002A95F2 /* FoodViewController.swift */; };
 		84219E8B27D13097002A95F2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84219E8A27D13097002A95F2 /* RoomViewController.swift */; };
+		8454BD8227D944290022D142 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BD8127D944290022D142 /* ReviewTableViewController.swift */; };
+		8454BD8427D944FD0022D142 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BD8327D944FD0022D142 /* ReviewTableViewCell.swift */; };
 		845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C6D9127CD10ED00C3208F /* RegisterViewController.swift */; };
 		845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C6D9327CD1B7800C3208F /* ForgotViewController.swift */; };
 		84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */; };
@@ -32,7 +34,6 @@
 		84BCD6C327C752B2000E504B /* vamaawUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6C227C752B2000E504B /* vamaawUITestsLaunchTests.swift */; };
 		84FE03AB27D8880E0067C6CB /* aReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AA27D8880E0067C6CB /* aReviewViewController.swift */; };
 		84FE03AD27D8B4B40067C6CB /* RatingCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AC27D8B4B40067C6CB /* RatingCon.swift */; };
-		84FE03AF27D90B7B0067C6CB /* CellReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AE27D90B7B0067C6CB /* CellReview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		84219E8627D11FB3002A95F2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		84219E8827D12FD9002A95F2 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		84219E8A27D13097002A95F2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		8454BD8127D944290022D142 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		8454BD8327D944FD0022D142 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		845C6D9127CD10ED00C3208F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		845C6D9327CD1B7800C3208F /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		84BCD6C227C752B2000E504B /* vamaawUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vamaawUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84FE03AA27D8880E0067C6CB /* aReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aReviewViewController.swift; sourceTree = "<group>"; };
 		84FE03AC27D8B4B40067C6CB /* RatingCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCon.swift; sourceTree = "<group>"; };
-		84FE03AE27D90B7B0067C6CB /* CellReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +149,6 @@
 				84219E8827D12FD9002A95F2 /* FoodViewController.swift */,
 				84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */,
 				84BCD6A227C752A2000E504B /* Main.storyboard */,
-				84FE03AE27D90B7B0067C6CB /* CellReview.swift */,
 				84B1093A27D7AE4400D6573F /* EditUserViewController.swift */,
 				84219E8A27D13097002A95F2 /* RoomViewController.swift */,
 				845C6D9327CD1B7800C3208F /* ForgotViewController.swift */,
@@ -157,6 +158,8 @@
 				84BCD6A527C752A2000E504B /* vamaaw.xcdatamodeld */,
 				845C6D9127CD10ED00C3208F /* RegisterViewController.swift */,
 				84B108B827D678C700D6573F /* LoginViewController.swift */,
+				8454BD8127D944290022D142 /* ReviewTableViewController.swift */,
+				8454BD8327D944FD0022D142 /* ReviewTableViewCell.swift */,
 			);
 			path = vamaaw;
 			sourceTree = "<group>";
@@ -313,8 +316,8 @@
 				845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */,
 				84BCD6A127C752A2000E504B /* ViewController.swift in Sources */,
 				84B1089F27D65DD000D6573F /* DBhelper.swift in Sources */,
+				8454BD8227D944290022D142 /* ReviewTableViewController.swift in Sources */,
 				84FE03AD27D8B4B40067C6CB /* RatingCon.swift in Sources */,
-				84FE03AF27D90B7B0067C6CB /* CellReview.swift in Sources */,
 				84B1094327D7B8F400D6573F /* TheUser+CoreDataProperties.swift in Sources */,
 				84219E8727D11FB3002A95F2 /* SecondViewController.swift in Sources */,
 				84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */,
@@ -328,6 +331,7 @@
 				84B1094127D7B8F400D6573F /* TheReviews+CoreDataProperties.swift in Sources */,
 				84B1094027D7B8F400D6573F /* TheReviews+CoreDataClass.swift in Sources */,
 				84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */,
+				8454BD8427D944FD0022D142 /* ReviewTableViewCell.swift in Sources */,
 				845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

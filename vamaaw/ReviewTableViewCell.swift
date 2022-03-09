@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class ReviewTableViewCell: UITableViewCell {
 
     let ID = UILabel()
     let labMessage = UILabel()
