@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3GJ-ug-6dN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1d5-OO-dkG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -700,7 +700,7 @@
             </objects>
             <point key="canvasLocation" x="1618.840579710145" y="1591.7410714285713"/>
         </scene>
-        <!--Home-->
+        <!--Settings-->
         <scene sceneID="0RL-CB-NAC">
             <objects>
                 <viewController id="GFR-Fq-0U1" sceneMemberID="viewController">
@@ -710,7 +710,7 @@
                         <viewLayoutGuide key="safeArea" id="SQU-Js-Ge3"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="1Jn-iB-hpa">
+                    <tabBarItem key="tabBarItem" title="Settings" image="house.fill" catalog="system" selectedImage="gearshape.fill" id="1Jn-iB-hpa">
                         <color key="badgeColor" systemColor="systemGreenColor"/>
                     </tabBarItem>
                 </viewController>
@@ -806,17 +806,18 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Zt-5f-zNy"/>
-        <segue reference="6c4-wv-NnW"/>
+        <segue reference="PMg-7c-zz6"/>
+        <segue reference="Gyt-be-msZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bicycle" catalog="system" width="128" height="78"/>
         <image name="cup.and.saucer" catalog="system" width="128" height="91"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="img" width="216" height="233"/>
         <image name="key" catalog="system" width="86" height="128"/>
-        <image name="star" catalog="system" width="128" height="116"/>
         <image name="sadimg" width="920" height="756"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
