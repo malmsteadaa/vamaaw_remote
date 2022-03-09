@@ -7,11 +7,11 @@
 //rger
 //you all ready for this ?
 import UIKit
+import CoreData
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //placeholder faces
-    var imgData = ["img","midimg","sadimg"]
-    var foodTotal = 0
+    var items:[TheReviews]?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -28,7 +28,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Your Gy Reviews"
+        return "Your Gym Reviews"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
