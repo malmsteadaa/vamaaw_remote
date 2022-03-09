@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
             let pass = String(data: password, encoding: .utf8){
                 print("id is", uid, "password is", pass)
              if(pass==pw.text!){
+                 st = "Success"
                  success(name:uid)
              }else{
                  st = "Failed login"
