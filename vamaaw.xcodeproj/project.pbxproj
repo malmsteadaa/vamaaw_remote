@@ -30,6 +30,8 @@
 		84BCD6B727C752B2000E504B /* vamaawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6B627C752B2000E504B /* vamaawTests.swift */; };
 		84BCD6C127C752B2000E504B /* vamaawUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6C027C752B2000E504B /* vamaawUITests.swift */; };
 		84BCD6C327C752B2000E504B /* vamaawUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6C227C752B2000E504B /* vamaawUITestsLaunchTests.swift */; };
+		84FE03AB27D8880E0067C6CB /* aReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AA27D8880E0067C6CB /* aReviewViewController.swift */; };
+		84FE03AD27D8B4B40067C6CB /* RatingCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AC27D8B4B40067C6CB /* RatingCon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		84BCD6BC27C752B2000E504B /* vamaawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vamaawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BCD6C027C752B2000E504B /* vamaawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vamaawUITests.swift; sourceTree = "<group>"; };
 		84BCD6C227C752B2000E504B /* vamaawUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vamaawUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84FE03AA27D8880E0067C6CB /* aReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aReviewViewController.swift; sourceTree = "<group>"; };
+		84FE03AC27D8B4B40067C6CB /* RatingCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		84BCD69027C752A2000E504B = {
 			isa = PBXGroup;
 			children = (
+				84FE03AA27D8880E0067C6CB /* aReviewViewController.swift */,
 				84B1093C27D7B8F300D6573F /* TheReviews+CoreDataClass.swift */,
 				84B1093D27D7B8F400D6573F /* TheReviews+CoreDataProperties.swift */,
 				84B1093E27D7B8F400D6573F /* TheUser+CoreDataClass.swift */,
@@ -132,6 +137,7 @@
 		84BCD69B27C752A2000E504B /* vamaaw */ = {
 			isa = PBXGroup;
 			children = (
+				84FE03AC27D8B4B40067C6CB /* RatingCon.swift */,
 				84BCD69C27C752A2000E504B /* AppDelegate.swift */,
 				84BCD69E27C752A2000E504B /* SceneDelegate.swift */,
 				84BCD6A027C752A2000E504B /* ViewController.swift */,
@@ -304,10 +310,12 @@
 				845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */,
 				84BCD6A127C752A2000E504B /* ViewController.swift in Sources */,
 				84B1089F27D65DD000D6573F /* DBhelper.swift in Sources */,
+				84FE03AD27D8B4B40067C6CB /* RatingCon.swift in Sources */,
 				84B1094327D7B8F400D6573F /* TheUser+CoreDataProperties.swift in Sources */,
 				84219E8727D11FB3002A95F2 /* SecondViewController.swift in Sources */,
 				84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */,
 				84219E8B27D13097002A95F2 /* RoomViewController.swift in Sources */,
+				84FE03AB27D8880E0067C6CB /* aReviewViewController.swift in Sources */,
 				84219E8927D12FD9002A95F2 /* FoodViewController.swift in Sources */,
 				84BCD69D27C752A2000E504B /* AppDelegate.swift in Sources */,
 				84B108B927D678C700D6573F /* LoginViewController.swift in Sources */,

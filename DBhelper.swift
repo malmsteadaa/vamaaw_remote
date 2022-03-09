@@ -156,64 +156,48 @@ class DBhelper{
     //REVIEWS
         func GetReview(id:UUID)->TheReviews{
             var re = TheReviews()
+            var pred = NSPredicate(format: "UUID == %@", id as CVarArg)
             
-            var fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "TheReview")
-            fReq.predicate=NSPredicate(format:"id == %@", id as CVarArg)
-            fReq.fetchLimit=1
-            do{
-                
-                let req = try context?.fetch(fReq) as! [TheReviews]
-                if(req.count != 0){
-                    re = req.first as! TheReviews
-                }else{
-                    print("no such data")
-                }
-            }catch{
-                print("cant retrieve data")
-            }
+            re = LoginViewController.UserName?.reviews?.filtered(using: pred).first as! TheReviews
             
             return re
         }
     func getTypeReview(a:TypeOfSerevice)->[TheReviews]{
         var re = [TheReviews]()
-        
-        var fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "TheReview")
-        fReq.predicate=NSPredicate(format:"tos == %@", a as! CVarArg)
-        
-        do{
-            
-            let re = try context?.fetch(fReq) as! [TheReviews]
-            if(re.count == 0){
-               
-                print("no such data")
-            }
-        }catch{
-            print("cant retrieve data")
-        }
-        return re    }
-    func GetReviews()->[TheReviews]{
-        var re = [TheReviews]()
-        
-            
-            var fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "TheReview")
-            do{
-                
-                let req = try context?.fetch(fReq) as! [TheReviews]
-                if(req.count != 0){
-re=req                }else{
-                    print("no such data")
-                }
-            }catch{
-                print("cant retrieve data")
-            }
-            
+        var pred=NSPredicate(format:"tos == %@", a as! CVarArg)
+        re = LoginViewController.UserName?.reviews?.filtered(using: pred) as! [TheReviews]
         return re
+        
     }
     
     
-    func UpdateReview(id:UUID, date: Date, rating:UUID, comments:String){}
     
-    func PushReview(type:String, date: Date, rating:UUID, comments:String){}
+    func UpdateReview(id:UUID, date: Date, rating:Int16, comments:String, tos:String){
+        var st = TheReviews()
+        var freq=NSFetchRequest<NSManagedObject>.init(entityName: "TheReviews")
+        freq.predicate=NSPredicate(format: "id == %@", id as! CVarArg)
+        do{
+            let stu = try context?.fetch(freq)
+            if(stu?.count != 0){
+                st = stu?.first as! TheReviews
+                if comments != ""{
+                    st.commets = comments}
+                if date != nil{
+                    st.date = date}
+                if rating != nil{
+                    st.rating=rating
+                }
+                if tos != ""{
+                    st.tos=tos
+                }
+                
+                try context?.save()
+                print("updated", st.id!)
+            }
+        }catch{
+            print("error on update")
+        }
+    }
     
-    func DeleteReview(){}
+    
 }

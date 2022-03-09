@@ -22,9 +22,7 @@ class EditUserViewController: UIViewController {
         datepicker.addTarget(self, action: #selector(dateChange(datepicker:)), for: UIControl.Event.valueChanged)
         datepicker.frame.size=CGSize(width: 0, height: 300)
         datepicker.preferredDatePickerStyle = .wheels
-        if datepicker == nil {
-            print("nil")
-        }
+       
         dateTF.inputView=datepicker
         dateTF.text=formatDate(date: formatetoDate(s: today!))
                                Name.text=na!

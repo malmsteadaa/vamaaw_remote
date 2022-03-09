@@ -1,0 +1,50 @@
+//
+//  RatingCon.swift
+//  vamaaw
+//
+//  Created by admin on 3/9/22.
+//
+
+import Foundation
+import UIKit
+
+class RatingCon: UIStackView {
+    var starsRating = 0
+    var starsEmptyPicName = "star" // change it to your empty star picture name
+    var starsFilledPicName = "star.fill" // change it to your filled star picture name
+    override func draw(_ rect: CGRect) {
+        let starButtons = self.subviews.filter{$0 is UIButton}
+        var starTag = 1
+        for button in starButtons {
+            if let button = button as? UIButton{
+                button.setImage(UIImage(systemName: starsEmptyPicName), for: .normal)
+                button.addTarget(self, action: #selector(self.pressed(sender:)), for: .touchUpInside)
+                button.tag = starTag
+                starTag = starTag + 1
+            }
+        }
+       setStarsRating(rating:starsRating)
+    }
+    func setStarsRating(rating:Int){
+        self.starsRating = rating
+        let stackSubViews = self.subviews.filter{$0 is UIButton}
+        for subView in stackSubViews {
+            print("first subview")
+            if let button = subView as? UIButton{
+                if button.tag > starsRating {
+                    print(button.tag,"Empty")
+
+                    button.setImage(UIImage(systemName: starsEmptyPicName), for: .normal)
+                }else{
+                    print(button.tag,"filling")
+
+                    button.setImage(UIImage(systemName: starsFilledPicName), for: .normal)
+                }
+            }
+        }
+    }
+    @objc func pressed(sender: UIButton) {
+        print(sender.tag)
+        setStarsRating(rating: sender.tag)
+    }
+}
