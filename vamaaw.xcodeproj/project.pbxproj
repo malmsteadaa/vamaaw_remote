@@ -32,6 +32,7 @@
 		84BCD6C327C752B2000E504B /* vamaawUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCD6C227C752B2000E504B /* vamaawUITestsLaunchTests.swift */; };
 		84FE03AB27D8880E0067C6CB /* aReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AA27D8880E0067C6CB /* aReviewViewController.swift */; };
 		84FE03AD27D8B4B40067C6CB /* RatingCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AC27D8B4B40067C6CB /* RatingCon.swift */; };
+		84FE03AF27D90B7B0067C6CB /* CellReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE03AE27D90B7B0067C6CB /* CellReview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		84BCD6C227C752B2000E504B /* vamaawUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vamaawUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84FE03AA27D8880E0067C6CB /* aReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aReviewViewController.swift; sourceTree = "<group>"; };
 		84FE03AC27D8B4B40067C6CB /* RatingCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCon.swift; sourceTree = "<group>"; };
+		84FE03AE27D90B7B0067C6CB /* CellReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				84219E8827D12FD9002A95F2 /* FoodViewController.swift */,
 				84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */,
 				84BCD6A227C752A2000E504B /* Main.storyboard */,
+				84FE03AE27D90B7B0067C6CB /* CellReview.swift */,
 				84B1093A27D7AE4400D6573F /* EditUserViewController.swift */,
 				84219E8A27D13097002A95F2 /* RoomViewController.swift */,
 				845C6D9327CD1B7800C3208F /* ForgotViewController.swift */,
@@ -311,6 +314,7 @@
 				84BCD6A127C752A2000E504B /* ViewController.swift in Sources */,
 				84B1089F27D65DD000D6573F /* DBhelper.swift in Sources */,
 				84FE03AD27D8B4B40067C6CB /* RatingCon.swift in Sources */,
+				84FE03AF27D90B7B0067C6CB /* CellReview.swift in Sources */,
 				84B1094327D7B8F400D6573F /* TheUser+CoreDataProperties.swift in Sources */,
 				84219E8727D11FB3002A95F2 /* SecondViewController.swift in Sources */,
 				84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */,
