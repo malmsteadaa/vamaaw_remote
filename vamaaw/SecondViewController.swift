@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //placeholder faces
     var imgData = ["img","midimg","sadimg"]
+    var gymTotal = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -41,7 +42,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-       return 4
+       return 5
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -62,17 +63,40 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             switch indexPath.item {
             case 0 :
-                return print("good")
+                gymTotal = 3 + gymTotal
+                return print(gymTotal)
             case 1:
-                return print("ok")
+                gymTotal = 1 + gymTotal
+                return print(gymTotal)
             case 2:
-                return print("bad")
+                gymTotal = 0 + gymTotal
+                return print(gymTotal)
             default:
-                return print("")
+                return print(gymTotal)
             }
+    }
+    
+    @IBOutlet weak var submit: UIButton!
+    
+    @IBOutlet weak var reviewimg: UIImageView!
+    
+    @IBOutlet weak var reviewtf: UILabel!
+    
+    var result : Int!
+    @IBAction func submitAction(_ sender: Any) {
+        result = gymTotal
+        if gymTotal <= 6 {
+            performSegue(withIdentifier: "gotobadReview", sender: self)
+            gymTotal = 0
+        }
+        else{
+            performSegue(withIdentifier: "gotogoodReview", sender: self)
+            gymTotal = 0
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 

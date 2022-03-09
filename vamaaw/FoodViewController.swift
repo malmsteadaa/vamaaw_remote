@@ -11,6 +11,7 @@ import UIKit
 class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //placeholder faces
     var imgData = ["img","midimg","sadimg"]
+    var foodTotal = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -60,16 +61,32 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            switch indexPath.item {
-            case 0 :
-                return print("good")
-            case 1:
-                return print("ok")
-            case 2:
-                return print("bad")
-            default:
-                return print("")
-            }
+                switch indexPath.item {
+                case 0 :
+                    foodTotal = 3 + foodTotal
+                    return print(foodTotal)
+                case 1:
+                    foodTotal = 1 + foodTotal
+                    return print(foodTotal)
+                case 2:
+                    foodTotal = 0 + foodTotal
+                    return print(foodTotal)
+                default:
+                    return print(foodTotal)
+                }
+    }
+    var result : Int!
+    
+    @IBAction func submitReview(_ sender: Any) {
+        result = foodTotal
+        if foodTotal <= 6 {
+            performSegue(withIdentifier: "gotobadReview", sender: self)
+            foodTotal = 0
+        }
+        else{
+            performSegue(withIdentifier: "gotogoodReview", sender: self)
+            foodTotal = 0
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
