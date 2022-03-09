@@ -15,6 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pw: UITextField!
     @IBOutlet weak var un: UITextField!
     @IBOutlet weak var backgroundGradientView: UIView!
+    @IBOutlet weak var image1: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +28,12 @@ class LoginViewController: UIViewController {
         gradientLayer.colors =
         [UIColor.blue.cgColor, UIColor.white.cgColor]
         backgroundGradientView.layer.addSublayer(gradientLayer)
+        
+        //animates image1 on load after delay
+        UIView.animate(withDuration: 4.0, delay: 4, animations: {
+            self.image1.transform = CGAffineTransform(rotationAngle:  (180.0 * .pi) / 180.0)
+            
+        })
         
     }
     

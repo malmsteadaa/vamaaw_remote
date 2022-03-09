@@ -277,6 +277,10 @@
                                     <segue destination="foS-OB-vTM" kind="show" id="iBu-IT-ccV"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dravuni-island-fiji-islands" translatesAutoresizingMaskIntoConstraints="NO" id="4Bk-B9-jQz">
+                                <rect key="frame" x="87" y="509" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uwZ-OU-fbB"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -284,6 +288,7 @@
                     <navigationItem key="navigationItem" id="fR7-L3-Jjr"/>
                     <connections>
                         <outlet property="backgroundGradientView" destination="hog-WO-TKp" id="b2a-Us-IQ9"/>
+                        <outlet property="image1" destination="4Bk-B9-jQz" id="ibP-cQ-dOU"/>
                         <outlet property="pw" destination="YSO-ml-2Bb" id="d2u-Fd-Rtv"/>
                         <outlet property="un" destination="Gml-Bn-yEj" id="wRn-m6-mQP"/>
                     </connections>
@@ -493,6 +498,7 @@
     <resources>
         <image name="bicycle" catalog="system" width="128" height="78"/>
         <image name="cup.and.saucer" catalog="system" width="128" height="91"/>
+        <image name="dravuni-island-fiji-islands" width="2121" height="1414"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="img" width="216" height="233"/>
         <image name="key" catalog="system" width="86" height="128"/>
