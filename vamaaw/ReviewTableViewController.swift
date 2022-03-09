@@ -6,7 +6,7 @@
 //
 
 import UIKit
-var re: TheReviews?
+var re: [TheReviews]?
 class ReviewTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -23,12 +23,13 @@ class ReviewTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return re?.count ?? 1
     }
 
     
@@ -49,9 +50,9 @@ class ReviewTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         as! ReviewTableViewCell
         // Configure the cell...
-        cell.rate.text=String(Int(re?.rating ?? 0))
-        cell.day.text=formatDate(date: re?.date ?? Date())
-        cell.labMessage.text=re?.commets
+        cell.rate.text=String(Int(re?[indexPath.row].rating ?? 0))
+        cell.day.text=formatDate(date: re?[indexPath.row].date ?? Date())
+        cell.labMessage.text=re?[indexPath.row].commets
         return cell
     }
     
