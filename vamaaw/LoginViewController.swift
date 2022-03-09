@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     func success(name:String){
         print("success")
         LoginViewController.UserName = DBhelper.inst.GetUser(n: name)
-        self.performSegue(withIdentifier: "success", sender: self)
+        self.performSegue(withIdentifier: "gotoTab", sender: self)
 
     }
     /*
