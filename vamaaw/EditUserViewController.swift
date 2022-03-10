@@ -24,7 +24,10 @@ class EditUserViewController: UIViewController {
         datepicker.preferredDatePickerStyle = .wheels
        
         dateTF.inputView=datepicker
-        dateTF.text=formatDate(date: formatetoDate(s: today!))
+        Name.text = LoginViewController.UserName?.name!
+        
+        
+        dateTF.text=formatDate(date: (LoginViewController.UserName?.dob)!)
                                Name.text=na!
         
     }
