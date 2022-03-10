@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    //placeholder faces
+    
     var items:[TheReviews]?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
