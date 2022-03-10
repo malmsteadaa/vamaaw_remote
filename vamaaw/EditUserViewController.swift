@@ -26,8 +26,14 @@ class EditUserViewController: UIViewController {
         dateTF.inputView=datepicker
         dateTF.text=formatDate(date: formatetoDate(s: today!))
                                Name.text=na!
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]
+    
+        backgroundGradientView.layer.addSublayer(gradientLayer)
         
     }
+    @IBOutlet weak var backgroundGradientView: UIView!
     
     @objc func dateChange(datepicker: UIDatePicker){
         dateTF.text=formatDate(date: datepicker.date)

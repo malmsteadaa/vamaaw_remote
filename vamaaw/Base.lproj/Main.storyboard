@@ -483,6 +483,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ya-Hv-TFc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-IU-hXf">
                                 <rect key="frame" x="58" y="114" width="73" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -558,6 +563,7 @@
                     <navigationItem key="navigationItem" id="T36-YK-t90"/>
                     <connections>
                         <outlet property="Name" destination="oHc-az-vxE" id="1sg-ez-Bhn"/>
+                        <outlet property="backgroundGradientView" destination="1ya-Hv-TFc" id="TA5-VX-TLY"/>
                         <outlet property="cpw" destination="Nwg-kP-gvL" id="fah-Bc-TyG"/>
                         <outlet property="dateTF" destination="BNn-WY-gaA" id="C4c-E8-qGR"/>
                         <outlet property="pw" destination="4I3-Vu-eYr" id="j2I-1i-RiE"/>
@@ -565,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJM-HH-fun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2494" y="781"/>
+            <point key="canvasLocation" x="-2494.202898550725" y="780.80357142857144"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="grC-mX-ful">
@@ -1205,9 +1211,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fgE-1U-ZHS"/>
-        <segue reference="PMg-7c-zz6"/>
+        <segue reference="6Zt-5f-zNy"/>
         <segue reference="Tdb-d1-pzG"/>
-        <segue reference="Gyt-be-msZ"/>
+        <segue reference="6c4-wv-NnW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bicycle" catalog="system" width="128" height="78"/>
