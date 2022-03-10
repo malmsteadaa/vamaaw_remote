@@ -375,6 +375,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gf4-4c-6zL">
+                                <rect key="frame" x="268" y="44" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <segue destination="2NO-7e-BqH" kind="show" id="kVP-VK-xDZ"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a0W-8Q-xWb">
                                 <rect key="frame" x="20" y="96" width="374" height="766"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -473,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6V-Is-k8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4116" y="672"/>
+            <point key="canvasLocation" x="-4059" y="754"/>
         </scene>
         <!--Edit User View Controller-->
         <scene sceneID="qKg-v9-TF3">
@@ -1189,24 +1198,21 @@
                                     <segue destination="m1g-9w-oOU" kind="showDetail" identifier="AddItem" id="fgE-1U-ZHS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-1w-Dsc">
+                                <rect key="frame" x="20" y="15" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <segue destination="2NO-7e-BqH" kind="show" id="mYH-7n-tzm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pVZ-UP-qkb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="1nh-Zu-ceq">
-                        <barButtonItem key="leftBarButtonItem" title="Save" style="plain" id="YJs-Lz-HnY">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="RPL-ZL-g9Y">
-                                <rect key="frame" x="20" y="5" width="92" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                            </button>
-                            <connections>
-                                <segue destination="2NO-7e-BqH" kind="show" id="beV-YS-wVq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="1nh-Zu-ceq"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="LUl-KI-fkX" id="1Um-gX-sDK"/>
@@ -1214,13 +1220,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nX5-tG-fCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4130" y="672"/>
+            <point key="canvasLocation" x="-4774" y="661"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fgE-1U-ZHS"/>
         <segue reference="PMg-7c-zz6"/>
-        <segue reference="beV-YS-wVq"/>
+        <segue reference="mYH-7n-tzm"/>
         <segue reference="Tdb-d1-pzG"/>
         <segue reference="Gyt-be-msZ"/>
     </inferredMetricsTieBreakers>
