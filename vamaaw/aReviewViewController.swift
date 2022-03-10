@@ -50,7 +50,7 @@ class aReviewViewController: UIViewController {
         d.inputView=datepicker
         
         c.text=Rev?.commets ?? " place golder"
-        
+        n.text=Rev?.title ?? "Some title"
         t.setTitle(Rev?.tos ?? "Type", for: .normal)
         if Rev != nil{
             aStack.starsRating=Int(Rev!.rating)
