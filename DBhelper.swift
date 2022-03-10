@@ -9,11 +9,10 @@ import Foundation
 import UIKit
 import CoreData
 class DBhelper{
-    
-    enum TypeOfSerevice{
-        case Food
-        case Gym
-        case Room
+    enum TypeOfSerevice: String, CaseIterable{
+        case Food="Food"
+        case Gym="Gym"
+        case Room="Room"
     }
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     static var inst=DBhelper()
@@ -154,14 +153,12 @@ class DBhelper{
     
     
     //REVIEWS
-        func GetReview(id:UUID)->TheReviews{
-            var re = TheReviews()
-            var pred = NSPredicate(format: "UUID == %@", id as CVarArg)
-            
-            re = LoginViewController.UserName?.reviews?.filtered(using: pred).first as! TheReviews
+        func GetReview(id:NSManagedObjectID)->TheReviews{
+            var re = context?.object(with: id) as! TheReviews
             
             return re
         }
+    
     func getTypeReview(a:TypeOfSerevice)->[TheReviews]{
         var re = [TheReviews]()
         var pred=NSPredicate(format:"tos == %@", a as! CVarArg)
@@ -169,17 +166,22 @@ class DBhelper{
         return re
         
     }
+    func getRelation(u:TheUser,r:TheReviews){
+        u.addToReviews(r)
+    }
     
     
-    
-    func UpdateReview(id:UUID, date: Date, rating:Int16, comments:String, tos:String){
+    func UpdateReview(id:NSManagedObjectID, title:String, date: Date, rating:Int16, comments:String, tos:String){
         var st = TheReviews()
         var freq=NSFetchRequest<NSManagedObject>.init(entityName: "TheReviews")
-        freq.predicate=NSPredicate(format: "id == %@", id as! CVarArg)
         do{
+            
             let stu = try context?.fetch(freq)
+            var r = context?.object(with: id) as! TheReviews
+            
             if(stu?.count != 0){
                 st = stu?.first as! TheReviews
+                
                 if comments != ""{
                     st.commets = comments}
                 if date != nil{
@@ -192,7 +194,7 @@ class DBhelper{
                 }
                 
                 try context?.save()
-                print("updated", st.id!)
+                print("updated", st.id)
             }
         }catch{
             print("error on update")

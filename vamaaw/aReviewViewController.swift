@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 class aReviewViewController: UIViewController {
-var Rev:TheReviews?
+    var Rev:TheReviews?
     enum TypeOfSerevice: String, CaseIterable{
         case Food="Food"
         case Gym="Gym"
@@ -17,6 +17,7 @@ var Rev:TheReviews?
     }
     @IBOutlet weak var aStack: RatingCon!
     
+    @IBOutlet weak var n: UITextField!
     @IBOutlet weak var t: UIButton!
     @IBOutlet weak var c: UITextField!
     @IBOutlet weak var d: UITextField!
@@ -26,26 +27,36 @@ var Rev:TheReviews?
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if LoginViewController.UserName == nil{
+            print("Default user used")
+            if !DBhelper.inst.HasUser(n: "2"){
+                DBhelper.inst.addUser(un: "2", name: "2", dob: Date(), pw: "2")
+            }
+            us = DBhelper.inst.GetUser(n: "2")
+        }
+        else{us=LoginViewController.UserName}
+        
         t.showsMenuAsPrimaryAction=true
         t.menu=addMenuItems()
-
+        
         // Do any additional setup after loading the view.
         //init date picker
-                let datepicker = UIDatePicker()
-                datepicker.datePickerMode = .date
-                datepicker.addTarget(self, action: #selector(dateChange(datepicker:)), for: UIControl.Event.valueChanged)
-                datepicker.frame.size=CGSize(width: 0, height: 300)
-                datepicker.preferredDatePickerStyle = .wheels
-                
-                d.inputView=datepicker
+        let datepicker = UIDatePicker()
+        datepicker.datePickerMode = .date
+        datepicker.addTarget(self, action: #selector(dateChange(datepicker:)), for: UIControl.Event.valueChanged)
+        datepicker.frame.size=CGSize(width: 0, height: 300)
+        datepicker.preferredDatePickerStyle = .wheels
         
-        d.text=formatDate(date: Rev?.date ?? Date())
-        c.text=Rev?.commets ?? ""
+        d.inputView=datepicker
+        
+        c.text=Rev?.commets ?? " place golder"
         
         t.setTitle(Rev?.tos ?? "Type", for: .normal)
         if Rev != nil{
             aStack.starsRating=Int(Rev!.rating)
         }
+        d.text=formatDate(date: Rev?.date ?? Date())
+        
     }
     
     
@@ -66,7 +77,7 @@ var Rev:TheReviews?
         formatter.dateFormat="MMMM dd, yyyy"
         return formatter.date(from: s)!
     }
-   
+    
     func addMenuItems()->UIMenu{
         let menuItems = UIMenu(title: "", options: .displayInline, children: [
             UIAction(title: "Food", image: UIImage(systemName: "trash")){ _ in
@@ -82,42 +93,29 @@ var Rev:TheReviews?
         return menuItems
     }
     
-
+    var us:TheUser?
     @IBAction func save(_ sender: Any) {
-        if Rev == nil{
-            Rev = TheReviews()
+        if Rev?.id == nil{
+            print("A Review wasn't given")
+            Rev?.title=n.text
             Rev?.tos=t.currentTitle!
             Rev?.date=formatetoDate(s: d.text!)
             Rev?.rating=Int16(aStack.starsRating)
             Rev?.commets=c.text!
-            LoginViewController.UserName?.addToReviews(Rev!)
+            Rev?.user=us
+            DBhelper.inst.getRelation(u: us!, r: Rev!)
             cancel("")
         }else{
-            DBhelper.inst.UpdateReview(id: (Rev?.id)!, date: formatetoDate(s: d.text!), rating: Int16(aStack.starsRating), comments: c.text!, tos: t.currentTitle!)
+            DBhelper.inst.UpdateReview(id: (Rev!.objectID), title: n.text!, date: formatetoDate(s: d.text!), rating: Int16(aStack.starsRating), comments: c.text!, tos: t.currentTitle!)
             cancel("")
         }
-    }
+        }
     @IBAction func cancel(_ sender: Any) {
-        _ = navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
+        
+        
+        
     }
     
-    
-     @IBAction func dea(_ sender: Any) {
-         if Rev == nil{
-             cancel("")
-         }else{
-             LoginViewController.UserName?.removeFromReviews(Rev!)
-             cancel("")
-         }
-     }
-    /*
-     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
