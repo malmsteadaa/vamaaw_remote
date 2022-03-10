@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //placeholder faces
-    var imgData = ["img","midimg","sadimg"]
-    var foodTotal = 0
+    var items:[TheReviews]?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -28,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "User Details"
+        return "Settings"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -43,3 +42,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
 }
+
