@@ -28,7 +28,6 @@ class EditUserViewController: UIViewController {
         
         
         dateTF.text=formatDate(date: (LoginViewController.UserName?.dob)!)
-                               Name.text=na!
         
     }
     
