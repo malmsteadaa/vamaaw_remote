@@ -27,6 +27,7 @@ class EditUserViewController: UIViewController {
         dateTF.text=formatDate(date: formatetoDate(s: today!))
                                Name.text=na!
         
+        
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
