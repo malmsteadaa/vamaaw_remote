@@ -51,6 +51,7 @@ class ReviewCDTAbleViewController: UIViewController, UITableViewDelegate, UITabl
         tableView.delegate=self
         tableView.dataSource=self
 fetchReviews()
+        
         // Do any additional setup after loading the view.
     }
     //c
@@ -70,13 +71,13 @@ fetchReviews()
         //fetch from core data
         do{
             //request specific
-            let request = TheReviews.fetchRequest() as NSFetchRequest<TheReviews>
-            let pred = NSPredicate(format: "tos == %@", TypeOfSerevice.Gym.rawValue)
-            request.predicate=pred
-            us.reviewsArray
-            self.reviews = try context.fetch(request)
-            //all
-            //try self.reviews = context.fetch(TheReviews.fetchRequest())
+//            let request = TheReviews.fetchRequest() as NSFetchRequest<TheReviews>
+//            let pred = NSPredicate(format: "tos == %@", TypeOfSerevice.Gym.rawValue)
+//            request.predicate=pred
+//            us.reviewsArray
+//            self.reviews = try context.fetch(request)
+//            //all
+            try self.reviews = context.fetch(TheReviews.fetchRequest())
             
                 self.tableView.reloadData()
             
@@ -107,6 +108,13 @@ fetchReviews()
         
         return UISwipeActionsConfiguration(actions: [action])
 }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        LoginViewController.UserName=DBhelper.inst.GetUser(n: us.wrappedname)
+        fetchReviews()
+        tableView.reloadData()
+    }
+    
     
     // MARK: - Navigation
 
