@@ -51,8 +51,9 @@ class EditUserViewController: UIViewController {
     
     @IBAction func update(_ sender: Any) {
         var st:String?
+        if pw.text! != cpw.text!{
+
         if pw.text! != ""{
-            if pw.text! != cpw.text!{
                 DBhelper.inst.UpdateUserPW(n: (LoginViewController.UserName?.un)!, pw: pw.text!)
             }else{
                 st="Mix Match Passwords"
