@@ -29,6 +29,7 @@ class EditUserViewController: UIViewController {
         
         dateTF.text=formatDate(date: (LoginViewController.UserName?.dob)!)
         
+        
     }
     
     @objc func dateChange(datepicker: UIDatePicker){
