@@ -10,6 +10,7 @@ import UIKit
 class EditUserViewController: UIViewController {
     var today:String?
     var na:String?
+    var un:TheUser = LoginViewController.UserName!
     @IBOutlet weak var Name: UITextField!
     @IBOutlet weak var pw: UITextField!
     @IBOutlet weak var cpw: UITextField!
@@ -24,10 +25,11 @@ class EditUserViewController: UIViewController {
         datepicker.preferredDatePickerStyle = .wheels
        
         dateTF.inputView=datepicker
-        Name.text = LoginViewController.UserName?.name!
+        print("Names")
+        Name.text = un.wrappedname
         
-        
-        dateTF.text=formatDate(date: (LoginViewController.UserName?.dob)!)
+        print("date")
+        dateTF.text=formatDate(date: (un.wrappeddob))
         
         
     }
