@@ -16,6 +16,7 @@ class ReviewCDTAbleViewController: UIViewController, UITableViewDelegate, UITabl
     }
     var us:TheUser=LoginViewController.UserName ?? DBhelper.inst.GetUser(n: "2")
     
+    @IBOutlet weak var rightbar: UIButton!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.reviews?.count ?? 0
     }
@@ -55,17 +56,6 @@ fetchReviews()
         // Do any additional setup after loading the view.
     }
     //c
-    @IBAction func addTapped(_ sender: Any){
-        
-        //new
-        let newReview = TheReviews(context: self.context)
-        //add relationship
-        us.addToReviews(newReview)
-        //save
-        do{try self.context.save()}catch{}
-        //add to table
-        self.fetchReviews()
-    }
     //r
     func fetchReviews(){
         //fetch from core data
@@ -77,7 +67,8 @@ fetchReviews()
 //            us.reviewsArray
 //            self.reviews = try context.fetch(request)
 //            //all
-            try self.reviews = context.fetch(TheReviews.fetchRequest())
+            try self.reviews = context.fetch(
+                TheReviews.fetchRequest())
             
                 self.tableView.reloadData()
             
@@ -134,14 +125,12 @@ fetchReviews()
                 detailVC.Rev = selectedItem
             }
         }
-        else if segue.identifier == "AddItem"{
+        if segue.identifier == "AddItem"{
             print("AddItem")
             let detailVC = segue.destination as! aReviewViewController
-            // Get the new view controller using segue.destination.
-             var rev = TheReviews(context: self.context)
-            us.addToReviews(rev)
+            //Get the new view controller using segue.destination.
+            let rev = TheReviews(context: self.context)
             detailVC.Rev = rev
-            do{try self.context.save()}catch{}
             
         }
     }

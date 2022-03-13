@@ -168,6 +168,8 @@ class DBhelper{
     }
     func getRelation(u:TheUser,r:TheReviews){
         u.addToReviews(r)
+        r.user=u
+        try! context?.save()
     }
     
     
