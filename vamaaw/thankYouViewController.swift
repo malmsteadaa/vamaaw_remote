@@ -11,19 +11,14 @@ class thankYouViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton=true
         // Do any additional setup after loading the view.
+//        LoginViewController.UserName=TheUser()
+//        rate.text = avg as! String
     }
-    var avg:Int?
-    func sum(){
-        let ar = LoginViewController.UserName?.reviewsArray
-        var sum=0
-        for T in ar!{
-            sum += Int(T.rating)
-        }
-        self.avg=sum/ar!.count
-    }
-
+    
+   
+    
     /*
     // MARK: - Navigation
 

@@ -46,6 +46,7 @@ class DBhelper{
         }
         
     }
+   
     func GetUser(n: String)->TheUser{
         var stu = TheUser()
         

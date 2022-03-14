@@ -464,7 +464,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmX-52-nUD">
-                                <rect key="frame" x="10" y="76" width="394" height="667"/>
+                                <rect key="frame" x="10" y="96" width="394" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -478,7 +478,7 @@
                             <constraint firstItem="jIo-KP-T0d" firstAttribute="bottom" secondItem="vmX-52-nUD" secondAttribute="bottom" constant="50" id="4W7-Xe-5Ym"/>
                             <constraint firstItem="vmX-52-nUD" firstAttribute="leading" secondItem="jIo-KP-T0d" secondAttribute="leading" constant="10" id="mjQ-ib-cf2"/>
                             <constraint firstItem="jIo-KP-T0d" firstAttribute="trailing" secondItem="vmX-52-nUD" secondAttribute="trailing" constant="10" id="pYz-Pt-B4U"/>
-                            <constraint firstItem="vmX-52-nUD" firstAttribute="top" secondItem="jIo-KP-T0d" secondAttribute="top" constant="20" id="yuH-0f-etf"/>
+                            <constraint firstItem="vmX-52-nUD" firstAttribute="top" secondItem="jIo-KP-T0d" secondAttribute="top" constant="40" id="yuH-0f-etf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="facebook" selectedImage="facebook" id="t2k-Vr-KYb"/>
@@ -493,7 +493,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="feD-sQ-WeH">
             <objects>
-                <viewController id="mIR-Sc-rMo" customClass="welcomeViewController" customModule="vamaaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mIR-Sc-rMo" customClass="welcomeViewController" customModule="vamaaw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nk8-Gx-P7s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,6 +536,7 @@
                             <constraint firstItem="O7U-iP-2Rh" firstAttribute="top" secondItem="4TA-fL-qz8" secondAttribute="top" constant="330" id="zpQ-sp-QbF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sQd-D3-R3v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNn-O4-IKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -867,29 +868,97 @@
             </objects>
             <point key="canvasLocation" x="680" y="1741"/>
         </scene>
-        <!--View Controller-->
+        <!--Thank You View Controller-->
         <scene sceneID="3qI-GW-AfC">
             <objects>
-                <viewController id="skU-Qf-Ggh" sceneMemberID="viewController">
+                <viewController id="skU-Qf-Ggh" customClass="thankYouViewController" customModule="vamaaw" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bup-sb-c5o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come Again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHc-AO-p1X">
+                                <rect key="frame" x="220.5" y="345" width="163.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QAP-sr-ou2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6a-EN-Nei">
+                                <rect key="frame" x="0.0" y="386" width="414" height="51.5"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.69803921570000005" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Thank you"/>
+                                <connections>
+                                    <segue destination="mIR-Sc-rMo" kind="showDetail" id="NVL-wG-nPo"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-Rr-B7k">
+                                <rect key="frame" x="80.5" y="264" width="130" height="113.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="YDh-XG-zHH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5Rr-Q1-WX6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.10980392160000001" green="0.8862745098" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uhi-Rr-B7k" firstAttribute="top" secondItem="5Rr-Q1-WX6" secondAttribute="top" constant="220" id="2m8-Kq-KFT"/>
+                            <constraint firstItem="5Rr-Q1-WX6" firstAttribute="trailing" secondItem="fHc-AO-p1X" secondAttribute="trailing" constant="30" id="65R-TW-dUy"/>
+                            <constraint firstItem="W6a-EN-Nei" firstAttribute="top" secondItem="fHc-AO-p1X" secondAttribute="bottom" constant="20" id="9Ek-Eb-VCE"/>
+                            <constraint firstItem="W6a-EN-Nei" firstAttribute="top" secondItem="Uhi-Rr-B7k" secondAttribute="bottom" constant="8.5" id="DTV-zl-aWd"/>
+                            <constraint firstItem="W6a-EN-Nei" firstAttribute="top" secondItem="Uhi-Rr-B7k" secondAttribute="bottom" constant="8.5" id="DeP-24-WWj"/>
+                            <constraint firstItem="5Rr-Q1-WX6" firstAttribute="bottom" secondItem="W6a-EN-Nei" secondAttribute="bottom" constant="375.5" id="NB7-58-Myf"/>
+                            <constraint firstItem="W6a-EN-Nei" firstAttribute="leading" secondItem="5Rr-Q1-WX6" secondAttribute="leading" id="hky-Ra-gPh"/>
+                            <constraint firstItem="5Rr-Q1-WX6" firstAttribute="trailing" secondItem="W6a-EN-Nei" secondAttribute="trailing" id="lEc-Rc-J2K"/>
+                            <constraint firstItem="fHc-AO-p1X" firstAttribute="leading" secondItem="Uhi-Rr-B7k" secondAttribute="trailing" constant="10" id="tmg-oI-1c4"/>
+                            <constraint firstItem="fHc-AO-p1X" firstAttribute="top" secondItem="5Rr-Q1-WX6" secondAttribute="top" constant="301" id="uO0-g2-Kre"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Qqk-O9-dB3"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXY-wv-drv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="-145"/>
+            <point key="canvasLocation" x="-10.144927536231885" y="-145.3125"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Finish-->
+        <scene sceneID="0gA-DP-gaM">
+            <objects>
+                <viewController id="1bA-eP-sCr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="juZ-52-aa1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geo-b9-0mt">
+                                <rect key="frame" x="164.5" y="405.5" width="85.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Summary"/>
+                                <connections>
+                                    <segue destination="skU-Qf-Ggh" kind="show" id="hGL-gk-bor"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bkf-EO-m4o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="geo-b9-0mt" firstAttribute="centerX" secondItem="juZ-52-aa1" secondAttribute="centerX" id="fo5-aH-tSn"/>
+                            <constraint firstItem="geo-b9-0mt" firstAttribute="centerY" secondItem="juZ-52-aa1" secondAttribute="centerY" id="jn8-cW-8cC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Finish" image="person" catalog="system" selectedImage="person.fill" id="rwb-9z-Peh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYZ-Se-VrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="135"/>
+        </scene>
+        <!--Tab View Controller-->
         <scene sceneID="01O-3T-mmR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iD7-c0-kMt" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iD7-c0-kMt" customClass="TabViewController" customModule="vamaaw" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="YFE-i2-fpY">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="aYl-MP-BKY"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="YFE-i2-fpY"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gvZ-bt-qep">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -899,22 +968,27 @@
                         <segue destination="nSe-J6-22h" kind="relationship" relationship="viewControllers" id="ie0-If-Z7f"/>
                         <segue destination="2NO-7e-BqH" kind="relationship" relationship="viewControllers" id="mtN-Xe-Fd4"/>
                         <segue destination="ens-27-TWX" kind="relationship" relationship="viewControllers" id="DfX-GR-1lM"/>
+                        <segue destination="PfI-8g-fRW" kind="unwind" unwindAction="unwindToThankWithSender:" id="Pf6-cV-pYA"/>
+                        <segue destination="1bA-eP-sCr" kind="relationship" relationship="viewControllers" id="vpG-hD-U7Q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRY-YN-cFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="PfI-8g-fRW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="681" y="820"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="N9T-2F-ri0"/>
-        <segue reference="UTH-Yf-sTQ"/>
+        <segue reference="mtN-Xe-Fd4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="dravuni-island-fiji-islands" width="2121" height="1414"/>
         <image name="facebook" width="75" height="42"/>
         <image name="logo" width="323" height="317"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
