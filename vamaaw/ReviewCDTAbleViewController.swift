@@ -59,7 +59,7 @@ fetchReviews()
     //r
     func fetchReviews(){
         //fetch from core data
-        do{
+       // do{
             //request specific
 //            let request = TheReviews.fetchRequest() as NSFetchRequest<TheReviews>
 //            let pred = NSPredicate(format: "tos == %@", TypeOfSerevice.Gym.rawValue)
@@ -67,12 +67,15 @@ fetchReviews()
 //            us.reviewsArray
 //            self.reviews = try context.fetch(request)
 //            //all
-            try self.reviews = context.fetch(
-                TheReviews.fetchRequest())
-            
-                self.tableView.reloadData()
-            
-        }catch{}
+//
+//            try self.reviews = context.fetch(
+//                TheReviews.fetchRequest())
+//
+//                self.tableView.reloadData()
+//
+//        }catch{}
+        self.reviews = us.reviewsArray
+
     }
     //u
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -135,6 +138,8 @@ fetchReviews()
         }
     }
     
-    
-    
 }
+
+    
+
+

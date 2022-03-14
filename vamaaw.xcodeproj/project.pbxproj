@@ -14,6 +14,9 @@
 		8454BDDA27DA1CEC0022D142 /* TheReviews+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BDD627DA1CEC0022D142 /* TheReviews+CoreDataProperties.swift */; };
 		8454BDDB27DA1CEC0022D142 /* TheUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BDD727DA1CEC0022D142 /* TheUser+CoreDataClass.swift */; };
 		8454BDDC27DA1CEC0022D142 /* TheUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BDD827DA1CEC0022D142 /* TheUser+CoreDataProperties.swift */; };
+		8454BE5027DE8C290022D142 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BE4F27DE8C280022D142 /* welcomeViewController.swift */; };
+		8454BE5227DEBB900022D142 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BE5127DEBB8F0022D142 /* FacebookViewController.swift */; };
+		8454BE5427DEC3200022D142 /* thankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454BE5327DEC3200022D142 /* thankYouViewController.swift */; };
 		845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C6D9127CD10ED00C3208F /* RegisterViewController.swift */; };
 		845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C6D9327CD1B7800C3208F /* ForgotViewController.swift */; };
 		84B0F88127D01D61001C3BF2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */; };
@@ -57,6 +60,9 @@
 		8454BDD627DA1CEC0022D142 /* TheReviews+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheReviews+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8454BDD727DA1CEC0022D142 /* TheUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8454BDD827DA1CEC0022D142 /* TheUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8454BE4F27DE8C280022D142 /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		8454BE5127DEBB8F0022D142 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		8454BE5327DEC3200022D142 /* thankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thankYouViewController.swift; sourceTree = "<group>"; };
 		845C6D9127CD10ED00C3208F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		845C6D9327CD1B7800C3208F /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		84B0F88027D01D61001C3BF2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +146,9 @@
 				8454BDC927D9CC940022D142 /* ReviewCDTAbleViewController.swift */,
 				8454BDD327D9D39D0022D142 /* reviewTableViewCell.swift */,
 				84BCD6A227C752A2000E504B /* Main.storyboard */,
+				8454BE5327DEC3200022D142 /* thankYouViewController.swift */,
+				8454BE5127DEBB8F0022D142 /* FacebookViewController.swift */,
+				8454BE4F27DE8C280022D142 /* welcomeViewController.swift */,
 				84B1093A27D7AE4400D6573F /* EditUserViewController.swift */,
 				845C6D9327CD1B7800C3208F /* ForgotViewController.swift */,
 				84BCD6A827C752B1000E504B /* Assets.xcassets */,
@@ -303,6 +312,7 @@
 				8454BDCA27D9CC950022D142 /* ReviewCDTAbleViewController.swift in Sources */,
 				84BCD6A727C752A2000E504B /* vamaaw.xcdatamodeld in Sources */,
 				8454BDDB27DA1CEC0022D142 /* TheUser+CoreDataClass.swift in Sources */,
+				8454BE5027DE8C290022D142 /* welcomeViewController.swift in Sources */,
 				8454BDDA27DA1CEC0022D142 /* TheReviews+CoreDataProperties.swift in Sources */,
 				845C6D9227CD10ED00C3208F /* RegisterViewController.swift in Sources */,
 				8454BDDC27DA1CEC0022D142 /* TheUser+CoreDataProperties.swift in Sources */,
@@ -316,6 +326,8 @@
 				84B108B927D678C700D6573F /* LoginViewController.swift in Sources */,
 				84B1093B27D7AE4400D6573F /* EditUserViewController.swift in Sources */,
 				84BCD69F27C752A2000E504B /* SceneDelegate.swift in Sources */,
+				8454BE5427DEC3200022D142 /* thankYouViewController.swift in Sources */,
+				8454BE5227DEBB900022D142 /* FacebookViewController.swift in Sources */,
 				845C6D9427CD1B7800C3208F /* ForgotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
