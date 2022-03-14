@@ -80,13 +80,13 @@ class aReviewViewController: UIViewController {
     
     func addMenuItems()->UIMenu{
         let menuItems = UIMenu(title: "", options: .displayInline, children: [
-            UIAction(title: "Food", image: UIImage(systemName: "trash")){ _ in
+            UIAction(title: "Food", image: UIImage(systemName: "fork.knife.circle.fill")){ _ in
                 self.t.setTitle(TypeOfSerevice.Food.rawValue, for: .normal)
             },
-            UIAction(title: "Gym", image: UIImage(systemName: "trash")){_ in
+            UIAction(title: "Gym", image: UIImage(systemName: "scalemass.fill")){_ in
                 self.t.setTitle(TypeOfSerevice.Gym.rawValue, for: .normal)
             },
-            UIAction(title: "Room", image: UIImage(systemName: "trash")){_ in
+            UIAction(title: "Room", image: UIImage(systemName: "bed.double.fill")){_ in
                 self.t.setTitle(TypeOfSerevice.Room.rawValue, for: .normal)
             }
         ])
